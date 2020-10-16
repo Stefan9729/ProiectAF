@@ -3,8 +3,14 @@
     padding: 0;
     border: none;
 }
+
 body {
     font-family: 'robotoregular', Arial, Verdana, sans-serif;
+    background-image: url('https://hdwallsource.com/img/2016/7/atv-wide-wallpaper-hd-49814-51494-hd-wallpapers.jpg');
+    background-repeat: no-repeat;
+    background-size: auto;
+    background-position: center;
+    
 }
 h1,h2,h3,h4,h5,h6,strong,b {
     font-family: 'robotobold';
@@ -20,10 +26,11 @@ em,i {
     background: #fff;
 }
 header {
-    background: #ccc;
+    background: black;
 }
 header h1 {
     margin: 0;
+    color: white;
 }
 #logo {
     padding: 20px;
@@ -52,14 +59,21 @@ header h1 {
 #navigation li a:hover {
     background: #c00;
 }
+#navBtn {
+    font-size: 50px;
+    text-align: center;
+    color: white;
+}
+
 main {
     float: left;
     width: 100%;
+    
 }
 main > section {
     float: left;
     width: 100%;
-    background: #f2f2f2;
+    background: #666666;
 }
 main > section > .sidebar {
     display: inline;
@@ -67,6 +81,7 @@ main > section > .sidebar {
     box-sizing: border-box;
     -moz-box-sizing: border-box;
     padding: 10px;
+    color: white;
 }
 main > section > .sidebar.left {
     float: left;
@@ -86,16 +101,25 @@ main > section > .sidebar.left ul li {
     padding: 20px 10px;
     box-sizing: border-box;
     -moz-box-sizing: border-box;
-    background: #fff;
+    background-image: url('https://hdwallsource.com/img/2016/7/atv-wide-wallpaper-hd-49814-51494-hd-wallpapers.jpg');
+    background-repeat: no-repeat;
+    background-size: auto;
+    background-position: 50% 25%;
     border-width: 0 1px 0 1px;
     border-color: #ccc;
     border-style: solid;
+    text-shadow: 3px 3px 10px white;
+    height: 100vh;
 }
 #content h2 {
     margin: 0;
 }
+
+
+
 main > section > .sidebar.right {
     float: right;
+    
 }
 main > section > .sidebar.right h3 {
     margin: 0;
@@ -106,4 +130,63 @@ footer {
     text-align: left;
     padding: 20px;
     height: 1%;
+ 
+}
+
+
+/* The Overlay (background) */
+.overlay {
+  /* Height & width depends on how you want to reveal the overlay (see JS below) */   
+  height: 100%;
+  width: 0;
+  position: fixed; /* Stay in place */
+  z-index: 1; /* Sit on top */
+  left: 0;
+  top: 0;
+  background-color: rgb(0,0,0); /* Black fallback color */
+  background-color: rgba(0,0,0, 0.9); /* Black w/opacity */
+  overflow-x: hidden; /* Disable horizontal scroll */
+  transition: 0.5s; /* 0.5 second transition effect to slide in or slide down the overlay (height or width, depending on reveal) */
+}
+
+/* Position the content inside the overlay */
+.overlay-content {
+  position: relative;
+  top: 25%; /* 25% from the top */
+  width: 100%; /* 100% width */
+  text-align: center; /* Centered text/links */
+  margin-top: 30px; /* 30px top margin to avoid conflict with the close button on smaller screens */
+}
+
+/* The navigation links inside the overlay */
+.overlay a {
+  padding: 8px;
+  text-decoration: none;
+  font-size: 36px;
+  color: #818181;
+  display: block; /* Display block instead of inline */
+  transition: 0.3s; /* Transition effects on hover (color) */
+}
+
+/* When you mouse over the navigation links, change their color */
+.overlay a:hover, .overlay a:focus {
+  color: #f1f1f1;
+}
+
+/* Position the close button (top right corner) */
+.overlay .closebtn {
+  position: absolute;
+  top: 20px;
+  right: 45px;
+  font-size: 60px;
+}
+
+/* When the height of the screen is less than 450 pixels, change the font-size of the links and position the close button again, so they don't overlap */
+@media screen and (max-height: 450px) {
+  .overlay a {font-size: 20px}
+  .overlay .closebtn {
+    font-size: 40px;
+    top: 15px;
+    right: 35px;
+  }
 }

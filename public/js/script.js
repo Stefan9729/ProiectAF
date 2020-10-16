@@ -27,11 +27,11 @@ function showProducts(categoryId) {
                 html = html + '<div class="product">'
                   +  '<h2>'+product.name+'</h2>'
                   +  '<p>'+product.description+'</p>'
-                  +  '<p>Pret: '+product.pret+'</p>'
+                  +  '<p>Pret: '+product.price+'</p>'
                   +  '<p>Categorie: '+product.category.name+'</p>'
                 + '</div>';
                 
-                html = html + '<h3>Product reviews</h3>'
+                //html = html + '<h3>Product reviews</h3>'
                 
                 if(product.reviews) {
                     product.reviews.forEach(
@@ -47,4 +47,14 @@ function showProducts(categoryId) {
         )
         $('#content').html(html);
     })
+}
+
+/* Open when someone clicks on the span element */
+function openNav() {
+  document.getElementById("navigation").style.width = "100%";
+}
+
+/* Close when someone clicks on the "x" symbol inside the overlay */
+function closeNav() {
+  document.getElementById("navigation").style.width = "0%";
 }

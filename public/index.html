@@ -1,7 +1,7 @@
 <!doctype html>
 <html>
 <head>
-    <title>Catalog Produse</title>
+    <title>Produse</title>
     <link rel="stylesheet" href="fonts/fonts.css">
     <link rel="stylesheet" href="css/style.css">
     <script src="js/jquery-1.11.1.min.js"></script>
@@ -10,42 +10,60 @@
 <body>
 <div id="container">
 	<header>
-        <section id="logo">
+        <section id="logo" >
             <h1>
-                Catalog Produse
+                Produse
             </h1>
         </section>
-        <section id="navigation">
-            <ul>
-                <li><a href="/">Home</a></li>
-                <li><a href="contact.html">Contact</a></li>
-                <li><a href="/admin/" target="_blank">Admin</a></li>
-            </ul>
-        </section>
+        
+       
+         
+        <div id="navigation" class="overlay">
+        
+             <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">Produse</a>
+            
+            <div class="overlay-content">
+                <ul>
+                    <li><a href="/">Acasa</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                    <li><a href="/admin/" target="_blank">Administrator</a></li>
+                    
+                </ul>
+            </div>
+             
+        
+        </div>
+        
+        <div style="text-align:center"> 
+            <span id="navBtn" onclick="openNav()">&#9776;</span>
+        </div>
+       
+        
 	</header>
     <main>
         <section>
-            <section class="sidebar left">
-                <ul id="categories">
+            <section id='left' class="sidebar left">
+                <ul id="categories" style="font-size: 20px">
 
                 </ul>
             </section>
             <section id="content">
                 
             </section>
-            <section class="sidebar right">
-                <h3>
-                    Lorem ipsum
-                </h3>
-                <p>
-                    Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie consequat, vel illum dolore eu feugiat nulla facilisis at vero eros et accumsan.
-                </p>
+            <section id='right' class="sidebar right" style="text-align: center">
+                <p style="color: #400080; font-size: 20px"> Avem echipa mobila de service. </p>
+                <a href="contact.html">
+                    <button type="button" >Sunati-ne!</button>
+                </a>
             </section>
         </section>
     </main>
     <footer>
             Copyright &copy; 2017
     </footer>
-</div>
 </body>
+</div>
+
+    
+
 </html>
